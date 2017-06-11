@@ -27,7 +27,7 @@ module Fluent
 
     def emit(data)
       time = Time.now.to_i
-      Fluent::Engine.emit(tag, time, data)
+      router.emit(tag, time, data)
     end
 
   end
